@@ -16,15 +16,22 @@ public class BlackJack {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        String name;
+        int cash = Players.getCash(); //Player's initial amount.
+        int bet; //Amount the player will bet.
+        Scanner input = new Scanner(System.in);
+        
         System.out.println("******** WELCOME TO BLACKJACK *********");
         
-        int cash = 2000; //Player's initial amount.
-        int bet; //Amount the player will bet.
+        System.out.println("Plese enter a Username: ");
+        name = input.nextLine();
+        Players player = new Players(name);
+        player.setName(name);
+        player.toString();
         
-        Scanner input = new Scanner(System.in);
-        System.out.println("\nYou have an initial value of: " + cash + "$");
+        
         System.out.println("\nEnter the anount you wish bet: ");
         bet = input.nextInt();
     }
     
-}
+} //end class

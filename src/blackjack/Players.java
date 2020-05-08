@@ -7,31 +7,33 @@ package blackjack;
 
 /**
  *
- * @author maria
+ * @author Maria Ramlochan
  */
 public class Players {
     private String name;
-    private int age;
+    private static int cash = 2000; //Player's initial amount.
     
     public Players(String name) {
         this.name = name;
+        System.out.println(this);
     }
     
-    public Players (String name, int age) {
-        this.age = age;
+    //setters
+    public void setName(String name) {
+        this.name = name;
     }
     
     //getters
     public String getName() { return name; }
-    public int getAge() { return age; }
+    public static int getCash() { return cash; } 
     
-    //setters
-    public void setName() {}
     
     	@Override
     public String toString() {
-        return 	"Enter UserName: " + name + 
-                "\n**************************************";
+        return  "\n**************************************" +
+                "\nWelcome " + name + 
+                "\n**************************************" +
+                "\nYou have an initial value of: " + cash + "$";
     }
-}
+} //end class
 
