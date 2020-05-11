@@ -16,6 +16,7 @@ public class BlackJack {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+<<<<<<< Upstream, based on branch 'master' of https://github.com/MariaRamlochan/FinalProject.git
         String name;
         //int cash = Players.getCash(); //Player's initial amount.
         int bet; //Amount the player will bet.
@@ -32,6 +33,28 @@ public class BlackJack {
         
         System.out.println("\nEnter the anount you wish bet: ");
         bet = input.nextInt();
+=======
+//        String name;
+//        int cash = Players.getCash(); //Player's initial amount.
+//        int bet; //Amount the player will bet.
+//        Scanner input = new Scanner(System.in);
+//        
+//        System.out.println("******** WELCOME TO BLACKJACK *********");
+//        
+//        System.out.println("Please enter a Username: ");
+//        name = input.nextLine();
+//        Players player = new Players(name);
+//        player.setName(name);
+//        player.toString();
+//        
+//        
+//        System.out.println("\nEnter the amount you wish bet: ");
+//        bet = input.nextInt();
+    	
+    	Deck deck = new Deck();
+    	deck.shuffledDeck();
+>>>>>>> 15e87a3 perfecting the Deck class
     }
+    
     
 } //end class

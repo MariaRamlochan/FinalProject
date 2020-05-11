@@ -1,13 +1,24 @@
 package blackjack;
-
+/**
+ * This is the Deck for the Blackjack Game.
+ * 
+ * @author Nirdesh Shrestha
+ */
 public class Deck {
-    public static void main(String[] args) {
-        String[] Suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
-        String[] Ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
-
+	
+	private String[] Suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
+    private String[] Ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
+    private String[] deck;
+    
+    static int totalCards;
+    
+    public Deck(){
         // initialize deck
-        int totalCards = Suits.length * Ranks.length;
-        String[] deck = new String[totalCards];
+        // total number of cards
+        totalCards = Suits.length * Ranks.length;
+        
+        // creating the deck
+        deck = new String[totalCards];
         for (int i = 0; i < Ranks.length; i++) {
             for (int j = 0; j < Suits.length; j++) {
                 deck[Suits.length*i + j] = Ranks[i] + " of " + Suits[j];
@@ -19,10 +30,14 @@ public class Deck {
             deck[i] = temp;
         }
 
-        // print initial deck
-        for (int i = 0; i < totalCards; i++) {
+        /*
+         * // print initial deck
+         * for (int i = 0; i < totalCards; i++) {
             System.out.println(deck[i]);
-        }
+        	}
+        
+         * 
+         */
         
         // shuffle
         for (int i = 0; i < totalCards; i++) {
@@ -33,8 +48,17 @@ public class Deck {
         }
 
         // print shuffled deck
-        for (int i = 0; i < totalCards; i++) {
-            System.out.println(deck[i]);
-        }
+        //for (int i = 0; i < totalCards; i++) {
+        //System.out.println(deck[i]);
+        //}  
     }
+    
+    //constructor to shuffle the Deck (note: not gonna print in real game!)
+    public void shuffledDeck() {
+  	  for (int i = 0; i < totalCards; i++) {
+            System.out.println("card no " + (i+1) + " is " + deck[i]);
+  	  }
+    }
+    
+    //pull two cards for the dealer and the player   
 }
