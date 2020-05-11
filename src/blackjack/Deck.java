@@ -34,18 +34,12 @@ public class Deck {
          * // print initial deck
          * for (int i = 0; i < totalCards; i++) {
             System.out.println(deck[i]);
-        	}
-        
+        	}       
          * 
          */
         
         // shuffle
-        for (int i = 0; i < totalCards; i++) {
-            int r = i + (int) (Math.random() * (totalCards-i));
-            String temp = deck[r];
-            deck[r] = deck[i];
-            deck[i] = temp;
-        }
+        
 
         // print shuffled deck
         //for (int i = 0; i < totalCards; i++) {
@@ -55,10 +49,23 @@ public class Deck {
     
     //constructor to shuffle the Deck (note: not gonna print in real game!)
     public void shuffledDeck() {
-  	  for (int i = 0; i < totalCards; i++) {
+    	for (int i = 0; i < totalCards; i++) {
+            int r = i + (int) (Math.random() * (totalCards-i));
+            String temp = deck[r];
+            deck[r] = deck[i];
+            deck[i] = temp;
             System.out.println("card no " + (i+1) + " is " + deck[i]);
-  	  }
+        }
+  	  	for (int j = 0; j < totalCards; j++) {
+  	  	}
     }
     
-    //pull two cards for the dealer and the player   
+    /*
+    //pull two cards for the dealer and the player 
+    public void hands() {
+    	//initial cards = 4
+    	int initialCards = 4;
+    	int r = initialCards % 1;	
+    }
+    */
 }

@@ -32,8 +32,19 @@ public class BlackJack {
 //        System.out.println("\nEnter the amount you wish bet: ");
 //        bet = input.nextInt();
     	
+    	// testing if the deck prints
     	Deck deck = new Deck();
     	deck.shuffledDeck();
+    	
+    	int r;
+    	for(int initialCards = 1; initialCards <= 4; initialCards++) {
+    		r = initialCards % 2;
+    		if(r == 1) {
+    			System.out.println(initialCards + " is odd");
+    		} else {
+    			System.out.println(initialCards + " is even");
+    		}    		
+    	}
     }
     
     
