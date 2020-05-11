@@ -12,6 +12,7 @@ package blackjack;
 public class Players {
     private String name;
     private static int cash = 2000; //Player's initial amount.
+    private static int bet;
     
     public Players(String name) {
         this.name = name;
@@ -19,15 +20,13 @@ public class Players {
     }
     
     //setters
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
+    //public static void setBet();
     
     //getters
     public String getName() { return name; }
-    public static int getCash() { return cash; } 
-    
-    
+    public static int getCash() { return cash; }
+
     	@Override
     public String toString() {
         return  "\n**************************************" +

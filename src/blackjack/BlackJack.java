@@ -17,7 +17,7 @@ public class BlackJack {
     public static void main(String[] args) {
         // TODO code application logic here
         String name;
-        int cash = Players.getCash(); //Player's initial amount.
+        //int cash = Players.getCash(); //Player's initial amount.
         int bet; //Amount the player will bet.
         Scanner input = new Scanner(System.in);
         
