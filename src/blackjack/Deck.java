@@ -8,7 +8,7 @@ public class Deck {
 	
 	private String[] Suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
     private String[] Ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
-    private String[] deck;
+    public String[] deck;
     
     static int totalCards;
     
@@ -54,10 +54,9 @@ public class Deck {
             String temp = deck[r];
             deck[r] = deck[i];
             deck[i] = temp;
+            //testing if it prints
             System.out.println("card no " + (i+1) + " is " + deck[i]);
         }
-  	  	for (int j = 0; j < totalCards; j++) {
-  	  	}
     }
     
     /*

@@ -33,16 +33,17 @@ public class BlackJack {
 //        bet = input.nextInt();
     	
     	// testing if the deck prints
-    	Deck deck = new Deck();
-    	deck.shuffledDeck();
-    	
+    	Deck game = new Deck();
+    	game.shuffledDeck();
     	int r;
-    	for(int initialCards = 1; initialCards <= 4; initialCards++) {
+    	for(int initialCards = 0; initialCards < 4; initialCards++) {
     		r = initialCards % 2;
     		if(r == 1) {
     			System.out.println(initialCards + " is odd");
+    			System.out.println("dealer's hand: " + game.deck[initialCards]);
     		} else {
     			System.out.println(initialCards + " is even");
+    			System.out.println("players's hand: " + game.deck[initialCards]);
     		}    		
     	}
     }
