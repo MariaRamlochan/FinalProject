@@ -8,7 +8,7 @@ public class Deck {
 	
     private String[] Suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
     private String[] Ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
-    public String[] deck;
+    public static String[] deck;
     
     static int totalCards;
     
@@ -47,7 +47,7 @@ public class Deck {
         //}  
     }
     
-    //constructor to shuffle the Deck (note: not gonna print in real game!)
+    //constructor to shuffle the Deck (note: not going to print in the real game!)
     public void shuffledDeck() {
     	for (int i = 0; i < totalCards; i++) {
             int r = i + (int) (Math.random() * (totalCards-i));
@@ -59,49 +59,66 @@ public class Deck {
         }
     }
     
-    public static value() {
-    	int v;
-        switch() {
+    public static int values() {
+        int value =0;
+        //int w=1;
+        switch(deck[value]) {
             case "Ace": 
-            	v = 1;
+            	value = 1;
+                //System.out.println(value);
             	break;
             case "2": 
-            	v = 2;
+            	value = 2;
+                //System.out.println(value);
             	break;
             case "3": 
-            	v = 3;
+            	value = 3;
+                //System.out.println(value);
             	break;
             case "4": 
-            	v = 4;
+            	value = 4;
+                //System.out.println(value);
             	break;
             case "5": 
-            	v = 5;
+            	value = 5;
+                //System.out.println(value);
             	break;
             case "6": 
-            	v = 6;
+            	value = 6;
+                //System.out.println(value);
             	break;
             case "7": 
-            	v = 7;
+            	value = 7;
+                //System.out.println(value);
             	break;
             case "8": 
-            	v = 8;
+            	value = 8;
+                //System.out.println(value);
             	break;
             case "9": 
-            	v = 9;
+            	value = 9;
+                //System.out.println(value);
             	break;
             case "10": 
-            	v = 10;
+            	value = 10;
+                //System.out.println(value);
             	break;
-            case "Jack": 
-            	v = 10;
+            case "Jack":
+            	value = 10;
+                //System.out.println(value);
             	break;
             case "Queen": 
-            	v = 10;
-            break;
-            	case "King": 
-            		v = 10;
-            break; 
+            	value = 10;
+                //System.out.println(value);
+                break;
+            case "King": 
+            	value = 10;
+                //System.out.println(value);
+                break; 
+                
         }
+        return value;
+        
     }
     
 }
