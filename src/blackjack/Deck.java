@@ -5,7 +5,7 @@ package blackjack;
  * @author Nirdesh Shrestha
  */
 public class Deck {
-	
+    private static int rank;
     private String[] Suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
     private String[] Ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
     public static String[] deck;
@@ -61,7 +61,8 @@ public class Deck {
     
     public static int values() {
         int value = 0;
-        switch(deck[0]) {
+        int w=0;
+        switch(deck[w]) {
             case "Ace": 
             	value = 1;
                 //System.out.println(value);
@@ -118,6 +119,6 @@ public class Deck {
         }
         return value;
         
-    }
+    }   
     
 }

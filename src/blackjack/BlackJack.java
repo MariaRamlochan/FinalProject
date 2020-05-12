@@ -31,7 +31,6 @@ public class BlackJack {
         Game.test();
         Deck.values();
         
-        
         System.out.println("\nEnter the amount you wish bet: ");
         bet = input.nextInt();
     	

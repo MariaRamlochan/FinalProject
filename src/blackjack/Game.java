@@ -15,16 +15,27 @@ public class Game {
                 
             //System.out.printf("%d %d ", dealerCards, playerCards);
             if(r == 1) {
-                 //dealerCards = deck.deck[initialCards].;
-                 System.out.println("\ndealer's hand: " + Deck.deck[initialCards]);
-                 System.out.println("Dealer's cards value: " + Deck.values());
+                //dealerCards = deck.deck[initialCards].;
+                System.out.println("\ndealer's hand: " + Deck.deck[initialCards]);
+                System.out.println("Dealer's cards value: " + Deck.values());
+                
+                //Checking is the dealer's hand is more than 21
+                if (Deck.values() > 21) {
+                    System.out.println("The dealer's busted");
+                } else if (Deck.values() <= 21){
+                    System.out.println("The dealer will hit");
+                }
                     
-                 //return initialCards;
+                 
             } else {
-                 System.out.println("\nplayers's hand: " + Deck.deck[initialCards]);
-                 System.out.println("Player's cards value: " + Deck.values());
-                 playerCards = initialCards;
-                 //return initialCards;
+                System.out.println("\nplayers's hand: " + Deck.deck[initialCards]);
+                System.out.println("Player's cards value: " + Deck.values());
+                //playerCards = initialCards;
+                
+                //Checking is the player's hand is more than 21
+                if (Deck.values() > 21) {
+                    System.out.println("You have busted");
+                }
              } 
                 
 	}
