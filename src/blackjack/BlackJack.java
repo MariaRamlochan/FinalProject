@@ -15,23 +15,24 @@ public class BlackJack {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        String name;
-//        int cash = Players.getCash(); //Player's initial amount.
-//        int bet; //Amount the player will bet.
-//        Scanner input = new Scanner(System.in);
-//        
-//        System.out.println("******** WELCOME TO BLACKJACK *********");
-//        
-//        System.out.println("Please enter a Username: ");
-//        name = input.nextLine();
-//        Players player = new Players(name);
-//        player.setName(name);
-//        player.toString();
-//        
-//        
-//        System.out.println("\nEnter the amount you wish bet: ");
-//        bet = input.nextInt();
+        String name;
+        int cash = Players.getCash(); //Player's initial amount.
+        int bet; //Amount the player will bet.
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("******** WELCOME TO BLACKJACK *********");
+        
+        System.out.println("Please enter a Username: ");
+        name = input.nextLine();
+        Players player = new Players(name);
+        player.setName(name);
+        player.toString();
+        
+        
+        System.out.println("\nEnter the amount you wish bet: ");
+        bet = input.nextInt();
     	
+/*
     	// testing if the deck prints
     	Deck deck = new Deck();
     	deck.shuffledDeck();
@@ -46,6 +47,7 @@ public class BlackJack {
     			System.out.println("players's hand: " + deck.deck[initialCards]);
     		}    		
     	}
+*/
     }
     
     
