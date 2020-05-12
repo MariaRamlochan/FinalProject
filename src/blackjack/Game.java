@@ -12,9 +12,8 @@ public class Game {
         Deck deck1 = new Deck();
         deck1.shuffledDeck();
         int r;
-        /* To calculate the number of cards in 
-         * players and dealers have 
-        */
+        // To calculate the number of cards in the players and dealers have 
+        
         int dealerCards = 0;
         int playerCards = 0;
 
@@ -22,8 +21,8 @@ public class Game {
             
 			r = initialCards % 2;
             if(r == 1) {
-                //dealerCards = deck.deck[initialCards];
-                System.out.println("\ndealer's hand: " + deck1.deck[initialCards]);
+                
+                System.out.println("Dealer draws: " + deck1.deck[initialCards]);
                 dealerHand[dealerCards] = deck1.deck[initialCards];
                 dealerCards++;
                 //System.out.println("Dealer's cards value: " + Deck.deck.values()[];
@@ -36,11 +35,10 @@ public class Game {
                 }
                 */   
             } else {
-                System.out.println("\nplayers's hand: " + deck1.deck[initialCards]);
+                System.out.println("Player draws: " + deck1.deck[initialCards]);
                 playerHand[playerCards] = deck1.deck[initialCards]; 
                 playerCards++;
                 //System.out.println("Player's cards value: " + Deck.values());
-                //playerCards = initialCards;
                 
                 /*
                 //Checking is the player's hand is more than 21
@@ -50,8 +48,10 @@ public class Game {
                 */
              }  
 		}
-        System.out.println(Arrays.toString(playerHand));
-        System.out.println(Arrays.toString(dealerHand));
+        System.out.println("****************************************************");
+        System.out.println("\nYour hand: " + Arrays.toString(playerHand));
+        System.out.println("****************************************************");
+        System.out.println("\nDealer's hand: " + Arrays.toString(dealerHand));
         
     }
 	

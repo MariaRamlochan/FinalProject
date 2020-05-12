@@ -38,7 +38,7 @@ public class Players {
         return  "\n**************************************" +
                 "\nWelcome " + name + 
                 "\n**************************************" +
-                "\nYou have an initial value of: " + cash + "$";
+                "\nYou have an initial value of: " + cash + "$\n";
     }
 } //end class
 
