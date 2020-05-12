@@ -1,5 +1,7 @@
 package blackjack;
 
+import java.util.Arrays;
+
 public class Game {
 	
 	public static String[] dealerHand = new String[5];
@@ -48,8 +50,8 @@ public class Game {
                 */
              }  
 		}
-        System.out.println(playerHand);
-        System.out.println(dealerHand);
+        System.out.println(Arrays.toString(playerHand));
+        System.out.println(Arrays.toString(dealerHand));
         
     }
 	
