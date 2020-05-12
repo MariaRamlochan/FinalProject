@@ -11,21 +11,21 @@ public class Game {
         int playerCards = 0;
         
 	for(int initialCards = 0; initialCards < 4; initialCards++) {
-		r = initialCards % 2;
+            r = initialCards % 2;
                 
-                //System.out.printf("%d %d ", dealerCards, playerCards);
-		if(r == 1) {
-                    //dealerCards = deck.deck[initialCards].;
-                    System.out.println("\ndealer's hand: " + deck.deck[initialCards]);
-                    System.out.println("Dealer's cards value: " + Deck.values());
+            //System.out.printf("%d %d ", dealerCards, playerCards);
+            if(r == 1) {
+                 //dealerCards = deck.deck[initialCards].;
+                 System.out.println("\ndealer's hand: " + Deck.deck[initialCards]);
+                 System.out.println("Dealer's cards value: " + Deck.values());
                     
-                    //return initialCards;
-		} else {
-                    System.out.println("\nplayers's hand: " + deck.deck[initialCards]);
-                     System.out.println("Player's cards value: " + Deck.values());
-                    playerCards = initialCards;
-                    //return initialCards;
-		} 
+                 //return initialCards;
+            } else {
+                 System.out.println("\nplayers's hand: " + Deck.deck[initialCards]);
+                 System.out.println("Player's cards value: " + Deck.values());
+                 playerCards = initialCards;
+                 //return initialCards;
+             } 
                 
 	}
         return dealerCards + playerCards;

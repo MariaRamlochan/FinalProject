@@ -60,9 +60,8 @@ public class Deck {
     }
     
     public static int values() {
-        int value =0;
-        //int w=1;
-        switch(deck[value]) {
+        int value = 0;
+        switch(deck[0]) {
             case "Ace": 
             	value = 1;
                 //System.out.println(value);
