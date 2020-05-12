@@ -61,59 +61,59 @@ public class Deck {
     
     public static int values() {
         int value = 0;
-        int w=0;
-        switch(deck[w]) {
+        String w = "2";
+        switch(w) {
             case "Ace": 
             	value = 1;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "2": 
             	value = 2;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "3": 
             	value = 3;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "4": 
             	value = 4;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "5": 
             	value = 5;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "6": 
             	value = 6;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "7": 
             	value = 7;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "8": 
             	value = 8;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "9": 
             	value = 9;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "10": 
             	value = 10;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "Jack":
             	value = 10;
-                //System.out.println(value);
+                System.out.println(value);
             	break;
             case "Queen": 
             	value = 10;
-                //System.out.println(value);
+                System.out.println(value);
                 break;
             case "King": 
             	value = 10;
-                //System.out.println(value);
+                System.out.println(value);
                 break; 
                 
         }

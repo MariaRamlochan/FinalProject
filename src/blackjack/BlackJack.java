@@ -15,7 +15,8 @@ public class BlackJack {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String name;
+        
+    	String name;
         int cash = Players.getCash(); //Player's initial amount.
         int bet; //Amount the player will bet.
         Scanner input = new Scanner(System.in);
@@ -29,12 +30,12 @@ public class BlackJack {
         player.toString();
         
         Game.test();
-        Deck.values();
         
         System.out.println("\nEnter the amount you wish bet: ");
         bet = input.nextInt();
     	
-
+    	
+    	//Deck.values();
     }
     
     
