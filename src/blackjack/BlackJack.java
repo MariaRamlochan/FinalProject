@@ -28,6 +28,7 @@ public class BlackJack {
         player.setName(name);
         player.toString();
         
+        Game.test();
         
         System.out.println("\nEnter the amount you wish bet: ");
         bet = input.nextInt();

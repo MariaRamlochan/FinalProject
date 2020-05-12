@@ -55,16 +55,53 @@ public class Deck {
             deck[r] = deck[i];
             deck[i] = temp;
             //testing if it prints
-            System.out.println("card no " + (i+1) + " is " + deck[i]);
+            //System.out.println("card no " + (i+1) + " is " + deck[i]);
         }
     }
     
-    /*
-    //pull two cards for the dealer and the player 
-    public void hands() {
-    	//initial cards = 4
-    	int initialCards = 4;
-    	int r = initialCards % 1;	
+    public static value() {
+        switch() {
+            case "Ace": 
+            v = 1;
+            break;
+            case 2: 
+            v = 2;
+            break;
+            case 3: 
+            v = 3;
+            break;
+            case 4: 
+            v = 4;
+            break;
+            case 5: 
+            v = 5;
+            break;
+            case 6: 
+            v = 6;
+            break;
+            case 7: 
+            v = 7;
+            break;
+            case 8: 
+            v = 8;
+            break;
+            case 9: 
+            v = 9;
+            break;
+            case 10: 
+            v = 10;
+            break;
+            case "Jack": 
+            v = 10;
+            break;
+            case "Queen": 
+            v = 10;
+            break;
+            case "King": 
+            v = 10;
+            break;
+            
+        }
     }
-    */
+    
 }
