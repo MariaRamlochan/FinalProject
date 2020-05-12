@@ -60,47 +60,47 @@ public class Deck {
     }
     
     public static value() {
+    	int v;
         switch() {
             case "Ace": 
-            v = 1;
-            break;
-            case 2: 
-            v = 2;
-            break;
-            case 3: 
-            v = 3;
-            break;
-            case 4: 
-            v = 4;
-            break;
-            case 5: 
-            v = 5;
-            break;
-            case 6: 
-            v = 6;
-            break;
-            case 7: 
-            v = 7;
-            break;
-            case 8: 
-            v = 8;
-            break;
-            case 9: 
-            v = 9;
-            break;
-            case 10: 
-            v = 10;
-            break;
+            	v = 1;
+            	break;
+            case "2": 
+            	v = 2;
+            	break;
+            case "3": 
+            	v = 3;
+            	break;
+            case "4": 
+            	v = 4;
+            	break;
+            case "5": 
+            	v = 5;
+            	break;
+            case "6": 
+            	v = 6;
+            	break;
+            case "7": 
+            	v = 7;
+            	break;
+            case "8": 
+            	v = 8;
+            	break;
+            case "9": 
+            	v = 9;
+            	break;
+            case "10": 
+            	v = 10;
+            	break;
             case "Jack": 
-            v = 10;
-            break;
+            	v = 10;
+            	break;
             case "Queen": 
-            v = 10;
+            	v = 10;
             break;
-            case "King": 
-            v = 10;
-            break;
-            
+            	case "King": 
+            		v = 10;
+            break; 
         }
     }
     
