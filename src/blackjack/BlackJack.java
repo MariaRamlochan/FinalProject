@@ -37,7 +37,7 @@ public class BlackJack {
 
     	  	
 
-    	Deck.values(Game.dealerHand);
+    	Values.values(Game.dealerHand);
         
     }
        
