@@ -32,10 +32,11 @@ public class BlackJack {
         Game.test();
         
         System.out.println("\nEnter the amount you wish bet: ");
-        bet = input.nextInt();
+        //bet = input.nextInt();
     	
     	
     	//Deck.values();
+        
     }
     
     

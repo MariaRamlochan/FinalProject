@@ -12,8 +12,8 @@ public class Game {
         Deck deck1 = new Deck();
         deck1.shuffledDeck();
         int r;
-        // To calculate the number of cards in the players and dealers have 
         
+        // To calculate the number of cards in the players and dealers have 
         int dealerCards = 0;
         int playerCards = 0;
 
@@ -38,7 +38,6 @@ public class Game {
                 System.out.println("Player draws: " + deck1.deck[initialCards]);
                 playerHand[playerCards] = deck1.deck[initialCards]; 
                 playerCards++;
-                //System.out.println("Player's cards value: " + Deck.values());
                 
                 /*
                 //Checking is the player's hand is more than 21
@@ -48,10 +47,13 @@ public class Game {
                 */
              }  
 		}
+        //Printout the Player's and Dealer's hand while showing the space available
         System.out.println("****************************************************");
         System.out.println("\nYour hand: " + Arrays.toString(playerHand));
+        System.out.println("Player's cards value: " + playerCards);
         System.out.println("****************************************************");
         System.out.println("\nDealer's hand: " + Arrays.toString(dealerHand));
+        System.out.println("Dealer's cards value: " + dealerCards);
         
     }
 	
