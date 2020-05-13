@@ -24,7 +24,10 @@ public class Game {
                 
                 System.out.println("Dealer draws: " + deck1.deck[initialCards]);
                 dealerHand[dealerCards] = deck1.deck[initialCards];
+                String card = dealerHand[dealerCards];
+                System.out.println(card);
                 dealerCards++;
+                
                 //System.out.println("Dealer's cards value: " + Deck.deck.values()[];
                 /*
                 //Checking is the dealer's hand is more than 21
@@ -37,6 +40,8 @@ public class Game {
             } else {
                 System.out.println("Player draws: " + deck1.deck[initialCards]);
                 playerHand[playerCards] = deck1.deck[initialCards]; 
+                String card = playerHand[playerCards];
+                System.out.println(card);
                 playerCards++;
                 
                 /*
@@ -46,14 +51,14 @@ public class Game {
                 }
                 */
              }  
-		}
+	}
         //Printout the Player's and Dealer's hand while showing the space available
-        System.out.println("****************************************************");
-        System.out.println("\nYour hand: " + Arrays.toString(playerHand));
-        System.out.println("Player's cards value: ");
-        System.out.println("****************************************************");
-        System.out.println("\nDealer's hand: " + Arrays.toString(dealerHand));
-        System.out.println("Dealer's cards value: ");
+//        System.out.println("****************************************************");
+//        System.out.println("\nYour hand: " + Arrays.toString(playerHand));
+//        System.out.println("Player's cards value: ");
+//        System.out.println("****************************************************");
+//        System.out.println("\nDealer's hand: " + Arrays.toString(dealerHand));
+//        System.out.println("Dealer's cards value: ");
         
     }
 	

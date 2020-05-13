@@ -10,11 +10,24 @@ package blackjack;
  * @author maria
  */
 public class Values {
-        public static int values(String[] Cards) {
+    
+        public static int values(String card1) {
         int value = 0;
-        for(int i=0; i < 2 ; i++) {
-        	switch(Cards[i]) {
-            	case "Ace": 
+        String card = card1;
+        	switch(card) {
+            	case "Ace of Spades": 
+            		value = 1;
+            		System.out.println(value);
+            		break;
+                 case "Ace of Diamonds": 
+            		value = 1;
+            		System.out.println(value);
+            		break;
+                 case "Ace of Hearts": 
+            		value = 1;
+            		System.out.println(value);
+            		break;
+                 case "Ace of Clubs": 
             		value = 1;
             		System.out.println(value);
             		break;
@@ -69,8 +82,8 @@ public class Values {
 	            default:
 	            	value = 0;
 	            	System.out.println("hello");
-	        }
 	    }
+        
         return value;
         
     } 
