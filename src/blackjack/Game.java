@@ -24,7 +24,9 @@ public class Game {
                 
                 System.out.println("Dealer draws: " + deck1.deck[initialCards]);
                 dealerHand[dealerCards] = deck1.deck[initialCards];
-                String card = dealerHand[dealerCards];
+                int index = dealerHand[dealerCards].indexOf(' ');
+                
+                String card = dealerHand[dealerCards].substring(0, index);
                 System.out.println(card);
                 dealerCards++;
                 
