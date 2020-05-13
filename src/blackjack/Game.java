@@ -44,13 +44,12 @@ public class Game {
             } else {
                 System.out.println("Player draws: " + deck1.deck[initialCards]);
                 playerHand[playerCards] = deck1.deck[initialCards]; 
+                
                 //printing the first words of the card
                 int index = playerHand[playerCards].indexOf(' ');
                 String card = playerHand[playerCards].substring(0, index);
                 System.out.println(card);
                 
-                
-                System.out.println(card);
                 playerCards++;
                 
                 /*
