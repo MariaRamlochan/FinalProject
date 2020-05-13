@@ -24,10 +24,12 @@ public class Game {
                 
                 System.out.println("Dealer draws: " + deck1.deck[initialCards]);
                 dealerHand[dealerCards] = deck1.deck[initialCards];
-                int index = dealerHand[dealerCards].indexOf(' ');
                 
+                //printing the first words of the card
+                int index = dealerHand[dealerCards].indexOf(' ');
                 String card = dealerHand[dealerCards].substring(0, index);
                 System.out.println(card);
+                
                 dealerCards++;
                 
                 //System.out.println("Dealer's cards value: " + Deck.deck.values()[];
@@ -42,7 +44,12 @@ public class Game {
             } else {
                 System.out.println("Player draws: " + deck1.deck[initialCards]);
                 playerHand[playerCards] = deck1.deck[initialCards]; 
-                String card = playerHand[playerCards];
+                //printing the first words of the card
+                int index = playerHand[playerCards].indexOf(' ');
+                String card = playerHand[playerCards].substring(0, index);
+                System.out.println(card);
+                
+                
                 System.out.println(card);
                 playerCards++;
                 
