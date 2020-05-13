@@ -31,13 +31,13 @@ public class BlackJack {
         
         Game.test();
         
-        System.out.println("\nEnter the amount you wish bet: ");
+        //System.out.println("\nEnter the amount you wish bet: ");
         //bet = input.nextInt();
     	
 
     	  	
 
-    	//Deck.values();
+    	Deck.values(Game.dealerHand);
         
     }
        

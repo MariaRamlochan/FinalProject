@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Game {
 	
-	public static String[] dealerHand = new String[5];
-	public static String[] playerHand = new String[5];
+	public static String[] dealerHand = new String[2];
+	public static String[] playerHand = new String[2];
 	
     public static void test(){
         // testing if the deck prints
@@ -50,10 +50,10 @@ public class Game {
         //Printout the Player's and Dealer's hand while showing the space available
         System.out.println("****************************************************");
         System.out.println("\nYour hand: " + Arrays.toString(playerHand));
-        System.out.println("Player's cards value: " + playerCards);
+        System.out.println("Player's cards value: ");
         System.out.println("****************************************************");
         System.out.println("\nDealer's hand: " + Arrays.toString(dealerHand));
-        System.out.println("Dealer's cards value: " + dealerCards);
+        System.out.println("Dealer's cards value: ");
         
     }
 	
