@@ -43,7 +43,7 @@ public class Deck {
         // shuffle
         
 
-        // print shuffled deck
+        //print shuffled deck
         //for (int i = 0; i < totalCards; i++) {
         //System.out.println(deck[i]);
         //}  
@@ -116,8 +116,7 @@ public class Deck {
             case "King": 
             	value = 10;
                 System.out.println(value);
-                break; 
-                
+                break;             
         }
         return value;
         

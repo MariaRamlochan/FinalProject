@@ -31,8 +31,6 @@ public class Players {
     public String getName() { return name; }
     public static int getCash() { return cash; }
     
-    
-   
     @Override
     public String toString() {
         return  "\n**************************************" +

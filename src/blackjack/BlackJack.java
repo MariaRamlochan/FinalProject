@@ -32,12 +32,16 @@ public class BlackJack {
         Game.test();
         
         System.out.println("\nEnter the amount you wish bet: ");
+<<<<<<< Upstream, based on branch 'master' of https://github.com/MariaRamlochan/FinalProject.git
         //bet = input.nextInt();
     	
     	
+=======
+        bet = input.nextInt();
+    	  	
+>>>>>>> 3eafdf3 ???
     	//Deck.values();
         
     }
-    
-    
+       
 } //end class
