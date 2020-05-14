@@ -15,21 +15,9 @@ public class Values {
         int value = 0;
         String card = card1;
         	switch(card) {
-            	case "Ace of Spades": 
+            	case "Ace": 
             		value = 1;
             		System.out.println("h" + value);
-            		break;
-                 case "Ace of Diamonds": 
-            		value = 1;
-            		System.out.println(value);
-            		break;
-                 case "Ace of Hearts": 
-            		value = 1;
-            		System.out.println(value);
-            		break;
-                 case "Ace of Clubs": 
-            		value = 1;
-            		System.out.println(value);
             		break;
             	case "2": 
             		value = 2;
