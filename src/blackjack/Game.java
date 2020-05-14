@@ -7,7 +7,7 @@ public class Game {
 	public static String[] dealerHand = new String[2];
 	public static String[] playerHand = new String[2];
 	
-    public static void test(){
+    public static void initialCards(){
         // testing if the deck prints
         Deck deck1 = new Deck();
         deck1.shuffledDeck();
@@ -28,7 +28,9 @@ public class Game {
                 //printing the first words of the card
                 int index = dealerHand[dealerCards].indexOf(' ');
                 String card = dealerHand[dealerCards].substring(0, index);
-                System.out.println(card);
+                
+                //System.out.println(card);
+                Values.values(card);
                 
                 dealerCards++;
                 
@@ -48,7 +50,9 @@ public class Game {
                 //printing the first words of the card
                 int index = playerHand[playerCards].indexOf(' ');
                 String card = playerHand[playerCards].substring(0, index);
-                System.out.println(card);
+                
+                //System.out.println(card);
+                Values.values(card);
                 
                 playerCards++;
                 
