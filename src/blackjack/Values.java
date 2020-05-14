@@ -17,7 +17,7 @@ public class Values {
         	switch(card) {
             	case "Ace": 
             		value = 1;
-            		System.out.println("h" + value);
+            		System.out.println(value);
             		break;
             	case "2": 
             		value = 2;

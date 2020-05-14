@@ -15,7 +15,6 @@ public class Deck {
     static int totalCards;
     
     public Deck(){
-        // initialize deck
         // total number of cards
         totalCards = Suits.length * Ranks.length;
         
@@ -23,30 +22,16 @@ public class Deck {
         deck = new String[totalCards];
         for (int i = 0; i < Ranks.length; i++) {
             for (int j = 0; j < Suits.length; j++) {
-                deck[Suits.length*i + j] = Ranks[i] + " of " + Suits[j];
+            	deck[Suits.length*i + j] = Ranks[i] + " of " + Suits[j];
+            	System.out.println(deck[Suits.length*i + j]);
             }
         }
         
-        for (int i = 0; i < totalCards; i++) {
+        /*for (int i = 0; i < totalCards; i++) {
             String temp = deck[i];
             deck[i] = temp;
-        }
-
-        /*
-         * // print initial deck
-         * for (int i = 0; i < totalCards; i++) {
-            System.out.println(deck[i]);
-        	}       
-         * 
-         */
-        
-        // shuffle
-        
-
-        //print shuffled deck
-        //for (int i = 0; i < totalCards; i++) {
-        //System.out.println(deck[i]);
-        //}  
+            //System.out.println(deck[i]);
+        } */
     }
     
     //constructor to shuffle the Deck (note: not going to print in the real game!)
@@ -56,9 +41,6 @@ public class Deck {
             String temp = deck[r];
             deck[r] = deck[i];
             deck[i] = temp;
-            //testing if it prints
-            //System.out.println("card no " + (i+1) + " is " + deck[i]);
         }
     }  
-    
 }

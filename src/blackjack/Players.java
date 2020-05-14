@@ -20,14 +20,8 @@ public class Players {
     
     //empty constructor 
     public Players() {
+    	System.out.println("******** WELCOME TO BLACKJACK *********");
     	enterName();
-    }
-    
-    //Players constructor.
-    public Players(String name) {
-        this.name = name;
-        //this.hands();
-        System.out.println(this);
     }
     
     //This method is called in the main class to enter and store the name of the player
@@ -45,8 +39,6 @@ public class Players {
     public void setName(String name) { this.name = name; }
     //public static void setBet();
     
-    //getting the player's name.
-    public String getName() { return name; }
     public static int getCash() { return cash; }
     
     @Override

@@ -20,19 +20,6 @@ public class BlackJack {
         int cash = Players.getCash(); //Player's initial amount.
         int bet; //Amount the player will bet.
         
-        /*Nirdesh: I am trying to program this in the player class
-         * and call it afterwards
-         *
-        Scanner input = new Scanner(System.in);
-        
-        System.out.println("******** WELCOME TO BLACKJACK *********");
-        
-        System.out.println("Please enter a Username: ");
-        name = input.nextLine();
-        Players player = new Players(name);
-        player.setName(name);
-        player.toString();
-        */
         Players test = new Players();
         
         Game.initialCards();
