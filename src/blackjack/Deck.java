@@ -26,12 +26,6 @@ public class Deck {
             	System.out.println(deck[Suits.length*i + j]);
             }
         }
-        
-        /*for (int i = 0; i < totalCards; i++) {
-            String temp = deck[i];
-            deck[i] = temp;
-            //System.out.println(deck[i]);
-        } */
     }
     
     //constructor to shuffle the Deck (note: not going to print in the real game!)
