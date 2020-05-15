@@ -58,6 +58,22 @@ public class Game {
         Scanner sc = new Scanner(System.in);
         System.out.println("Do you want to Hit or Stand?\nType 'hit' to Hit and 'stand' to Stand");
         String nextMove = sc.nextLine();
+
+        if (nextMove.equalsIgnoreCase("hit")) {
+			//System.out.println("you get the next card");
+        	String card = Deck.deck[4];
+        	
+        	int p = 2;
+        	
+        	String[] playerHand2 = Arrays.copyOf(playerHand, playerHand.length+1);;	
+        	playerHand2[2] = card;
+        	System.out.println(card);
+        	
+        	System.out.println(Arrays.toString(playerHand2));
+        	
+		} else if (nextMove.equalsIgnoreCase("stand")) {
+			//System.out.println("you selected to stand");
+		}
         
         if (nextMove.equalsIgnoreCase("hit")) {
             //System.out.println("you get the next card");
