@@ -104,8 +104,10 @@ public class Game {
 	        	System.out.println("Your hand: " + Arrays.toString(playerHand));
 	        	System.out.println("Dealer's hand: " + Arrays.toString(dealerHand));
         	} 
-        	if(dealerValue > playerValue) {
-        		System.out.println("Dealer wins");
+        	if(dealerValue > 21) {
+        		System.out.println("You Win");
+        	}else if(dealerValue > playerValue){
+        		System.out.println("Dealer Wins");
         	}else {
         		System.out.println("Draw");
         	}
