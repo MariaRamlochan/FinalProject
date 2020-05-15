@@ -45,62 +45,75 @@ public class Game {
                 String card = dealerHand[dealerCards];
                 
                 dealerValue += Values.values(card);
-                System.out.println("Dealer has: " + dealerValue);
+                System.out.println("Dealer has: " + dealerValue + " points");
                 dealerCards++;
             }  
         }
-      
+        System.out.println("Player's Points: " + playerValue);
+        
         Scanner sc = new Scanner(System.in);
         System.out.println("Do you want to Hit or Stand?\nType 'hit' to Hit and 'stand' to Stand");
-        String nextMove;
+        String nextMove = sc.nextLine();
         int nextCard = 4; //the location of the next card in the deck
         String[] playerHand2 = Arrays.copyOf(playerHand, playerHand.length + 1);
-        do{ 
-        	nextMove = sc.nextLine();
-        	if(playerValue == 21) {
-        		System.out.println("You Won!");
-        	} else if (nextMove.equalsIgnoreCase("hit") && playerValue < 21){
-	        	String card = Deck.deck[nextCard];
-	        	
-	            //Increasing the length in which the player hand can hold the next card.        
-	        	playerHand2[playerCards] = card;
-	        	
-	        	System.out.println("You draw: " + card);
-	        	
-	        	//Coping and increasing one space in players hand
-	        	playerHand = Arrays.copyOf(playerHand2, playerHand2.length);
-	        	playerHand2 = Arrays.copyOf(playerHand, playerHand.length+1);
-	        	playerValue += Values.values(card);
-	        	System.out.println(playerValue);
-	        	playerCards++;
+        if(nextMove.equalsIgnoreCase("hit")) {
+	        do{ 
+	        	if(playerValue == 21) {
+	        		System.out.println("You Won");
+	        	}
+	        	if (nextMove.equalsIgnoreCase("hit") && playerValue < 21){
+		        	String card = Deck.deck[nextCard];
+		        	
+		            //Increasing the length in which the player hand can hold the next card.        
+		        	playerHand2[playerCards] = card;
+		        	
+		        	System.out.println("You draw: " + card);
+		        	
+		        	//Coping and increasing one space in players hand
+		        	playerHand = Arrays.copyOf(playerHand2, playerHand2.length);
+		        	playerHand2 = Arrays.copyOf(playerHand, playerHand.length+1);
+		        	playerValue += Values.values(card);
+		        	System.out.println("Player's Points: " + playerValue);
+		        	playerCards++;
+		        	System.out.println("Your hand: " + Arrays.toString(playerHand));
+		        	
+		        	nextCard++; //incrementing the nextCard
+		        	nextMove = sc.nextLine();
+		        	
+		        	//System.out.println(nextCard);testing if nextCard works	
+		        } 
+	        } while(!nextMove.equalsIgnoreCase("stand") && playerCards <= 5 && playerValue < 21);   
+        }
+        if (nextMove.equalsIgnoreCase("stand") && playerValue <= 21) {
+        	System.out.println("you selected to stand");
+        	String[] dealerHand2 = Arrays.copyOf(dealerHand, dealerHand.length + 1);
+        	while(dealerValue < playerValue && dealerValue < 18){
+        		String card = Deck.deck[nextCard];
+        		dealerHand2[dealerCards] = card;
+        		
+       			System.out.println("Dealer Draws: " + card);
+        			
+       			dealerHand = Arrays.copyOf(dealerHand2, dealerHand2.length);
+   	        	dealerHand2 = Arrays.copyOf(dealerHand, dealerHand.length+1);
+            	
+   	        	dealerValue += Values.values(card);
+   	        	dealerCards++;
+    	        nextCard++;
+    	        
+   	        	System.out.println("Dealer's Points: " + dealerValue);
 	        	System.out.println("Your hand: " + Arrays.toString(playerHand));
-	        	
-	        	nextCard++; //incrementing the nextCard
-	        	
-	        	//System.out.println(nextCard);testing if nextCard works	
-	        } else if (nextMove.equalsIgnoreCase("stand")) {
-	        	System.out.println("you selected to stand");
-	        	String[] dealerHand2 = Arrays.copyOf(dealerHand, dealerHand.length + 1);
-	        	while(dealerValue < playerValue || dealerValue <18){
-	        		String card = Deck.deck[nextCard];
-	        		dealerHand2[dealerCards] = card;
-	        		
-	       			System.out.println("Dealer Draws: " + card);
-	        			
-	       			dealerHand = Arrays.copyOf(dealerHand2, dealerHand2.length);
-	   	        	dealerHand2 = Arrays.copyOf(dealerHand, dealerHand.length+1);
-	            	
-	   	        	dealerValue += Values.values(card);
-	   	        	dealerCards++;
-	    	        	
-	   	        	System.out.println(dealerValue);
-    	        	System.out.println("Your hand: " + Arrays.toString(dealerHand));
-	        	} 
-	        } else {
-	        	System.out.println("You are busted");
-	        }
-	        
-        } while(nextMove.equalsIgnoreCase("stand") && playerCards<5);    
+	        	System.out.println("Dealer's hand: " + Arrays.toString(dealerHand));
+        	} 
+        	if(dealerValue > playerValue) {
+        		System.out.println("Dealer wins");
+        	}else {
+        		System.out.println("Draw");
+        	}
+        } else if(playerValue == 21) {
+        	System.out.println("You Won");
+        } else {
+        	System.out.println("You are busted");
+        }
      } 
         
 //        Printout the Player's and Dealer's hand while showing the space available
