@@ -14,9 +14,8 @@ import java.util.Scanner;
  * @author Maria Ramlochan
  */
 public class Players {
-    private String name; //Player's name. 
-    private static int cash = 2000; //Player's initial amount.
-    private static int bet;
+    private static String name; //Player's name. 
+        
     
     //empty constructor 
     public Players() {
@@ -32,21 +31,21 @@ public class Players {
     	System.out.println("Please enter you name to begin!");
 		name = input.nextLine();
 		setName(name);
-		System.out.println(this);;
+		//System.out.println(this);;
 		
 	}
     //Setting the player's name.
     public void setName(String name) { this.name = name; }
     //public static void setBet();
+    public static String getName() { return name; }
     
-    public static int getCash() { return cash; }
     
     @Override
     public String toString() {
         return  "\n**************************************" +
-                "\nWelcome " + name + 
+                "\nHello " + name + 
                 "\n**************************************" +
-                "\nYou have an initial value of: " + cash + "$\n";
+                "\nYou have " + Chips.getCash() + " Chips left";
     }
 } //end class
 
