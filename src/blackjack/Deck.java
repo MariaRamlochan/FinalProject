@@ -23,18 +23,20 @@ public class Deck {
         for (int i = 0; i < Ranks.length; i++) {
             for (int j = 0; j < Suits.length; j++) {
             	deck[Suits.length*i + j] = Ranks[i] + " of " + Suits[j];
-            	System.out.println(deck[Suits.length*i + j]);
+            	
+            	//Testing if the deck works
+            	//System.out.println(deck[Suits.length*i + j]);
             }
         }
     }
     
     //constructor to shuffle the Deck (note: not going to print in the real game!)
-    public void shuffledDeck() {
+    public static String[] shuffledDeck() {
     	for (int i = 0; i < totalCards; i++) {
             int r = i + (int) (Math.random() * (totalCards-i));
             String temp = deck[r];
             deck[r] = deck[i];
             deck[i] = temp;
-        }
+        } return deck;
     }  
 }
