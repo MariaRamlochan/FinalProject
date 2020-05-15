@@ -45,7 +45,7 @@ public class Game {
                 String card = dealerHand[dealerCards];
                 
                 dealerValue += Values.values(card);
-                //System.out.println("Dealer has: " + dealerValue);
+                System.out.println("Dealer has: " + dealerValue);
                 dealerCards++;
             }  
         }
