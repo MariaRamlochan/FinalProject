@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Maria Ramlochan
  */
 public class Players {
-    public static String name; //Player's name. 
+	public static String name; //Player's name. 
         
     
     //empty constructor 
@@ -31,16 +31,24 @@ public class Players {
     	System.out.println("Please enter you name to begin!");
 		name = input.nextLine();
 		setName(name);
-		//System.out.println(this);;
 		
 	}
-    //Setting the player's name.
+    /**
+     * Setter to set the name
+     * @param name
+     */
     public void setName(String name) { this.name = name; }
-    //public static void setBet();
+    /**
+     * Getter to get the name
+     * @return
+     */
     public static String getName() { return name; }
     
     
     @Override
+    /**
+     * Print the given test when ever the name is called
+     */
     public String toString() {
         return  "\n**************************************" +
                 "\n* Hello " + name + 

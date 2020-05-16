@@ -10,7 +10,7 @@ import java.util.*;
  * @author Maria Ramlochan & Nirdesh Shrestha
  */
 public class BlackJack {
-
+	
     /**
      * @param args the command line arguments
      */
@@ -19,20 +19,22 @@ public class BlackJack {
     	String name;
     	int cash = Bet.chips; //Player's initial amount.
     	
-    	Players test = new Players();
-        System.out.println(test);
+    	//Initialize the Players class
+    	Players newPlayer = new Players();
+        System.out.println(newPlayer);
+        
+        //Ask the player to enter the amount he/she wants to bet
     	System.out.println("\nEnter the amount you wish bet: ");
     	int bet = sc.nextInt(); 
-    	
-    	System.out.println(test);
         
+    	//Start the Game
     	Game game = new Game();
         game.cards();
-
-           	
+       	
+        //Deducts or adds the amount of bet to the total amount of chips
         Bet betObject1 = new Bet(bet, Game.gameWon);
 
-        System.out.println(test);
-
+        //Final Output
+        System.out.println(newPlayer);
     }
 } //end class
