@@ -140,16 +140,16 @@ public class Game {
     } 
     
     /**
-     * @param gW
+    * @param gW
     * This method sets the GameWon and prints it out
     */
     public static void setGameWon(String gW) {
-		gameWon = gW;
-		System.out.println(gameWon);
-	}
+        gameWon = gW;
+        System.out.println(gameWon);
+    }
     /**
     * This method gets GameWon by returning the String that gameWon is equal to.
-     * @return 
+    * @return 
     */
     public static String getGameWon() {return gameWon;}
 }
