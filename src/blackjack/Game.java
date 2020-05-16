@@ -10,7 +10,7 @@ public class Game {
 	
     public static String[] dealerHand = new String[2];
     public static String[] playerHand = new String[2];
-	public static boolean gameWon;
+	public static String gameWon = "";
 	
     public static void cards(){
         
@@ -61,7 +61,8 @@ public class Game {
 	        do{ 
 	        	if(playerValue == 21) {
 	        		System.out.println("You Won");
-	        		gameWon = true;
+	        		setGameWon("true");
+	        		System.out.println(gameWon);
 	        	}
 	        	if (nextMove.equalsIgnoreCase("hit") && playerValue < 21){
 		        	String card = Deck.deck[nextCard];
@@ -108,26 +109,34 @@ public class Game {
         	} 
         	if(dealerValue > 21) {
         		System.out.println("You Win");
-        		gameWon = true;
+        		setGameWon("true");
+        		System.out.println(gameWon);
         	}else if(dealerValue > playerValue){
         		System.out.println("Dealer Wins");
-        		gameWon = false;
+        		setGameWon("false");
+        		System.out.println(gameWon);
         	}else {
         		System.out.println("Draw");
+        		setGameWon("draw");
+        		System.out.println(gameWon);
         	}
         } else if(playerValue == 21) {
         	System.out.println("You Won");
-        	gameWon = true;
+        	setGameWon("true");
+        	System.out.println(gameWon);
         } else {
         	System.out.println("You are busted");
         	System.out.println(Players.getName());;
-        	gameWon = false;
+        	setGameWon("false");
+        	System.out.println(gameWon);
         }
 
         //Players player = new Players();
     } 
-    public void setGameWon(boolean gameWon) {
-		Game.gameWon = gameWon;
+    public static void setGameWon(String gW) {
+		gameWon = gW;
+		System.out.println(gameWon);
 	}
+    public static String getGameWon() {return gameWon;}
 }
 

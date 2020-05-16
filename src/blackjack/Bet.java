@@ -8,14 +8,17 @@ public class Bet {
 		int chips = getChips();
 		System.out.println("Chips: " + chips);
 	}
-	public Bet(int b) {
+	public Bet(int b, String gameW) {
 		bet = b;
+		String gameWon = gameW;
 		int chips = getChips();
-		if(Game.gameWon) {
-			chips += bet;	
+		if(gameWon.equalsIgnoreCase("true")) {
+			Bet.chips += bet;	
+			setChips(chips);
+		} else if (gameWon.equalsIgnoreCase("false")) {
+			Bet.chips -= bet;
 			setChips(chips);
 		} else {
-			chips -= bet;
 			setChips(chips);
 		}
 	} 
