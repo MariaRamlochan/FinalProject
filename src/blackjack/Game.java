@@ -27,37 +27,39 @@ public class Game {
         // To calculate the number of cards in the players and dealers have 
         int dealerCards = 0, playerCards = 0;
         int playerValue = 0, dealerValue = 0;
-        System.out.println(Arrays.toString(Deck.deck));
+        
         for(int initialCards = 0; initialCards < 4; initialCards++) {
             
             r = initialCards % 2;
             if(r==0) {
-            	 //Placing the 1st and 3rd card in the players hands.
-            	System.out.print("Draw " + (playerCards + 1) + ":\nPlayer draws: " + Deck.deck[initialCards]);
-            	
-            	playerHand[playerCards] = Deck.deck[initialCards]; 
-            	
-            	String card = playerHand[playerCards];
+                //Placing the 1st and 3rd card in the players hands.
+                System.out.print("Draw " + (playerCards + 1) + ":\nPlayer draws: " + Deck.deck[initialCards]);
+                playerHand[playerCards] = Deck.deck[initialCards]; 
+                String card = playerHand[playerCards];
                 
-                playerValue += Values.values(card);
-                //System.out.println("Player has: " + playerValue);
+                //Add the values in the player's hands
+                playerValue += Values.value(card);
+                //Increasing the player's cards
                 playerCards++;
+                
             } else {
             	//Placing the 2nd and 4th card in the dealer's hand.
             	System.out.println("\t| Dealer draws: " + Deck.deck[initialCards]+ "\n");
                 dealerHand[dealerCards] = Deck.deck[initialCards];
-                
                 String card = dealerHand[dealerCards];
                 
-                dealerValue += Values.values(card);
-                System.out.println("Dealer has: " + dealerValue + " points");
+                //Add the values in the dealer's hands
+                dealerValue += Values.value(card);
+                //Increasing the dealer's cards
                 dealerCards++;
             }  
         }
+        //Printing the total values added together
         System.out.println("Player's Points: " + playerValue);
+        System.out.println("Dealer's Points: " + dealerValue);
         
         Scanner sc = new Scanner(System.in);
-        System.out.println("Do you want to Hit or Stand?\nType 'hit' to Hit and 'stand' to Stand");
+        System.out.println("\nDo you want to Hit or Stand?\nType 'hit' to Hit and 'stand' to Stand");
         String nextMove = sc.nextLine();
         int nextCard = 4; //the location of the next card in the deck
         String[] playerHand2 = Arrays.copyOf(playerHand, playerHand.length + 1);
@@ -79,7 +81,7 @@ public class Game {
 		        	//Coping and increasing one space in players hand
 		        	playerHand = Arrays.copyOf(playerHand2, playerHand2.length);
 		        	playerHand2 = Arrays.copyOf(playerHand, playerHand.length+1);
-		        	playerValue += Values.values(card);
+		        	playerValue += Values.value(card);
 		        	System.out.println("Player's Points: " + playerValue);
 		        	playerCards++;
 		        	System.out.println("Your hand: " + Arrays.toString(playerHand));
@@ -103,7 +105,7 @@ public class Game {
        			dealerHand = Arrays.copyOf(dealerHand2, dealerHand2.length);
    	        	dealerHand2 = Arrays.copyOf(dealerHand, dealerHand.length+1);
             	
-   	        	dealerValue += Values.values(card);
+   	        	dealerValue += Values.value(card);
    	        	dealerCards++;
     	        nextCard++;
     	        
