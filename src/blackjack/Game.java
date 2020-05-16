@@ -61,8 +61,8 @@ public class Game {
 	        do{ 
 	        	if(playerValue == 21) {
 	        		System.out.println("You Won");
-	        		setGameWon("true");
-	        		System.out.println(gameWon);
+	        		gameWon = "true";
+	        		
 	        	}
 	        	if (nextMove.equalsIgnoreCase("hit") && playerValue < 21){
 		        	String card = Deck.deck[nextCard];
@@ -109,26 +109,24 @@ public class Game {
         	} 
         	if(dealerValue > 21) {
         		System.out.println("You Win");
-        		setGameWon("true");
-        		System.out.println(gameWon);
+        		gameWon="true";
+        		
         	}else if(dealerValue > playerValue){
         		System.out.println("Dealer Wins");
-        		setGameWon("false");
-        		System.out.println(gameWon);
+        		gameWon="false";
+        		
         	}else {
         		System.out.println("Draw");
         		setGameWon("draw");
-        		System.out.println(gameWon);
+        		
         	}
         } else if(playerValue == 21) {
         	System.out.println("You Won");
-        	setGameWon("true");
+        	gameWon= "true";
         	System.out.println(gameWon);
         } else {
         	System.out.println("You are busted");
-        	//System.out.println(Players.getName());;
-        	setGameWon("false");
-        	//System.out.println(gameWon);
+        	gameWon= "false";
         }
 
         //Players player = new Players();

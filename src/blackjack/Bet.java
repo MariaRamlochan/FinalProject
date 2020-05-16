@@ -1,17 +1,13 @@
 package blackjack;
 
 public class Bet {
-	private static int chips = 2000; //Player's initial amount.
-	private static int bet;
+	public static int chips = 2000; //Player's initial amount.
+	public static int bet;
 	
-	public Bet(){
-		int chips = getChips();
-		System.out.println("Chips: " + chips);
-	}
 	public Bet(int b, String gameW) {
 		bet = b;
 		String gameWon = gameW;
-		int chips = getChips();
+		this.chips = chips;
 		if(gameWon.equalsIgnoreCase("true")) {
 			Bet.chips += bet;	
 			setChips(chips);
@@ -23,6 +19,4 @@ public class Bet {
 		}
 	} 
 	public void setChips(int chips) { this.chips = chips; }
-	
-	public static int getChips() { return chips; }
 }
