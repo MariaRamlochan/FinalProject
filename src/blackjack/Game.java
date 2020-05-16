@@ -24,7 +24,7 @@ public class Game {
         Deck deck1 = new Deck();
         Deck.shuffledDeck();
         
-        int r;
+        int r; //Initialize the remainder
         
         // To calculate the number of cards in the players and dealers have 
         int dealerCards = 0, playerCards = 0;
@@ -32,7 +32,7 @@ public class Game {
         
         for(int initialCards = 0; initialCards < 4; initialCards++) {
             
-            r = initialCards % 2;
+            r = initialCards % 2; //Caculating the remainder of the initial card
             if(r==0) {
                 //Placing the 1st and 3rd card in the players hands.
                 System.out.print("Draw " + (playerCards + 1) + ":\nPlayer draws: " + Deck.deck[initialCards]);
@@ -65,6 +65,7 @@ public class Game {
         System.out.println("\nDo you want to Hit or Stand?\nType 'hit' to Hit and 'stand' to Stand");
         String nextMove = sc.nextLine();
         //the location of the next card in the deck
+        
         int nextCard = 4;
         //Making a copy of the current player's hand and adding one space for more cards
         String[] playerHand2 = Arrays.copyOf(playerHand, playerHand.length + 1);
@@ -139,6 +140,7 @@ public class Game {
     } 
     
     /**
+     * @param gW
     * This method sets the GameWon and prints it out
     */
     public static void setGameWon(String gW) {
@@ -147,6 +149,7 @@ public class Game {
 	}
     /**
     * This method gets GameWon by returning the String that gameWon is equal to.
+     * @return 
     */
     public static String getGameWon() {return gameWon;}
 }
