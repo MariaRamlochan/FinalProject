@@ -45,7 +45,7 @@ public class Players {
         return  "\n**************************************" +
                 "\nHello " + name + 
                 "\n**************************************" +
-                "\nYou have " + Chips.getCash() + " Chips left";
+                "\nYou have " + Bet.getChips() + " Chips left";
     }
 } //end class
 

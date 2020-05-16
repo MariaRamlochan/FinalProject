@@ -10,8 +10,9 @@ public class Game {
 	
     public static String[] dealerHand = new String[2];
     public static String[] playerHand = new String[2];
+	public static boolean gameWon;
 	
-    public static void initialCards(){
+    public static void cards(){
         
         //Initializing the deck class.
         Deck deck1 = new Deck();
@@ -60,6 +61,7 @@ public class Game {
 	        do{ 
 	        	if(playerValue == 21) {
 	        		System.out.println("You Won");
+	        		gameWon = true;
 	        	}
 	        	if (nextMove.equalsIgnoreCase("hit") && playerValue < 21){
 		        	String card = Deck.deck[nextCard];
@@ -106,24 +108,21 @@ public class Game {
         	} 
         	if(dealerValue > 21) {
         		System.out.println("You Win");
+        		gameWon = true;
         	}else if(dealerValue > playerValue){
         		System.out.println("Dealer Wins");
+        		gameWon = false;
         	}else {
         		System.out.println("Draw");
         	}
         } else if(playerValue == 21) {
         	System.out.println("You Won");
+        	gameWon = true;
         } else {
         	System.out.println("You are busted");
+        	gameWon = false;
         }
-     } 
-        
-//        Printout the Player's and Dealer's hand while showing the space available
-//        System.out.println("****************************************************");
-//        System.out.println("\nYour hand: " + Arrays.toString(playerHand));
-//        System.out.println("Player's cards value: ");
-//        System.out.println("****************************************************");
-//        System.out.println("\nDealer's hand: " + Arrays.toString(dealerHand));
-//        System.out.println("Dealer's cards value: "); 
+        System.out.println(Players.getName());
+    } 
 }
 

@@ -17,20 +17,16 @@ public class BlackJack {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
     	String name;
-    	Chips chipsObject = new Chips();
-        int cash = Chips.getCash(); //Player's initial amount.
-        int bet; //Amount the player will bet.
+    	int cash = Bet.getChips(); //Player's initial amount.
+    	
+    	Players test = new Players();
 
-        Players test = new Players();
-        chipsObject.printChips();
-        //Game.initialCards();
-        
-
-        System.out.println("\nEnter the amount you wish bet: ");
-        //bet = input.nextInt();  
-        System.out.println(test);
-
-        
+    	System.out.println("\nEnter the amount you wish bet: ");
+    	int bet = sc.nextInt(); 
+    	Bet betObject1 = new Bet(bet);
+    	System.out.println(test);
+                
+        Game.cards();
     }
        
 } //end class
