@@ -19,7 +19,7 @@ public class Bet {
 			setChips(chips);
 		}
 	} 
-	public void setChips(int ch) { this.chips = ch; }
+	public void setChips(int chips) { this.chips = chips; }
 	
 	public static int getChips() { return chips; }
 }

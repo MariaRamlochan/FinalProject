@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Maria Ramlochan
  */
 public class Players {
-    private static String name; //Player's name. 
+    public static String name; //Player's name. 
         
     
     //empty constructor 
@@ -43,9 +43,10 @@ public class Players {
     @Override
     public String toString() {
         return  "\n**************************************" +
-                "\nHello " + name + 
+                "\n* Hello " + name + 
                 "\n**************************************" +
-                "\nYou have " + Bet.getChips() + " Chips left";
+                "\n* You have " + Bet.getChips() + " Chips left" +
+                "\n**************************************\n";
     }
 } //end class
 

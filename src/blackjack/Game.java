@@ -120,9 +120,14 @@ public class Game {
         	gameWon = true;
         } else {
         	System.out.println("You are busted");
+        	System.out.println(Players.getName());;
         	gameWon = false;
         }
-        Players.getName();
+
+        //Players player = new Players();
     } 
+    public void setGameWon(boolean gameWon) {
+		Game.gameWon = gameWon;
+	}
 }
 

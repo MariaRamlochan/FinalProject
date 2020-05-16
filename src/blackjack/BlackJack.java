@@ -20,14 +20,15 @@ public class BlackJack {
     	int cash = Bet.getChips(); //Player's initial amount.
     	
     	Players test = new Players();
-
+        System.out.println(test);
     	System.out.println("\nEnter the amount you wish bet: ");
     	int bet = sc.nextInt(); 
     	Bet betObject1 = new Bet(bet);
     	System.out.println(test);
-                
+        
         Game.cards();
-        //System.out.println(name);
+
+        System.out.println(test);
     }
        
 } //end class
