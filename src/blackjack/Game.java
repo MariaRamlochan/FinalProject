@@ -1,6 +1,8 @@
 package blackjack;
 /**
- *
+ * This class executes the win or loses from the values taken from the values class
+ * and initialize the shuffling and dealing hands of the player and the dealer.
+ * 
  * @author Maria Ramlochan & Nirdesh Shrestha
  */
 import java.util.Arrays;
