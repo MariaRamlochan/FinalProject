@@ -43,9 +43,10 @@ public class Players {
     @Override
     public String toString() {
         return  "\n**************************************" +
-                "\nHello " + name + 
+                "\n* Hello " + name + 
                 "\n**************************************" +
-                "\nYou have " + Bet.getChips() + " Chips left";
+                "\n* You have " + Bet.getChips() + " Chips left" +
+                "\n**************************************\n";
     }
 } //end class
 
