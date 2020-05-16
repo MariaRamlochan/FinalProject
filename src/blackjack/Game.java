@@ -58,27 +58,30 @@ public class Game {
         System.out.println("Player's Points: " + playerValue);
         System.out.println("Dealer's Points: " + dealerValue);
         
+        //Asking the playing if they would like to hit or stand 
         Scanner sc = new Scanner(System.in);
         System.out.println("\nDo you want to Hit or Stand?\nType 'hit' to Hit and 'stand' to Stand");
         String nextMove = sc.nextLine();
-        int nextCard = 4; //the location of the next card in the deck
+        //the location of the next card in the deck
+        int nextCard = 4;
+        //Making a copy of the current player's hand and adding one space for more cards
         String[] playerHand2 = Arrays.copyOf(playerHand, playerHand.length + 1);
-        if(nextMove.equalsIgnoreCase("hit")) {
+        if(nextMove.equalsIgnoreCase("hit")) { //Ignore if it's upper or lower case
 	        do{ 
-	        	if(playerValue == 21) {
-	        		System.out.println("You Won");
-	        		gameWon = "true";
+                    if(playerValue == 21) { //Player automatically wins if value is 21
+                        System.out.println("You Won");
+                        gameWon = "true";
 	        		
-	        	}
-	        	if (nextMove.equalsIgnoreCase("hit") && playerValue < 21){
-		        	String card = Deck.deck[nextCard];
+                     }
+                    if (nextMove.equalsIgnoreCase("hit") && playerValue < 21){
+                        String card = Deck.deck[nextCard];
 		        	
-		            //Increasing the length in which the player hand can hold the next card.        
-		        	playerHand2[playerCards] = card;
+                        //Increasing the length in which the player hand can hold the next card.        
+                        playerHand2[playerCards] = card;
 		        	
 		        	System.out.println("You draw: " + card);
 		        	
-		        	//Coping and increasing one space in players hand
+		        	//Coping and increasing one space in player's hand
 		        	playerHand = Arrays.copyOf(playerHand2, playerHand2.length);
 		        	playerHand2 = Arrays.copyOf(playerHand, playerHand.length+1);
 		        	playerValue += Values.value(card);
@@ -87,45 +90,42 @@ public class Game {
 		        	System.out.println("Your hand: " + Arrays.toString(playerHand));
 		        	
 		        	nextCard++; //incrementing the nextCard
-		        	nextMove = sc.nextLine();
-		        	
-		        	//System.out.println(nextCard);testing if nextCard works	
-		        } 
+		        	nextMove = sc.nextLine();	
+		    } 
 	        } while(!nextMove.equalsIgnoreCase("stand") && playerCards <= 5 && playerValue < 21);   
         }
         if (nextMove.equalsIgnoreCase("stand") && playerValue <= 21) {
-        	System.out.println("you selected to stand");
-        	String[] dealerHand2 = Arrays.copyOf(dealerHand, dealerHand.length + 1);
-        	while(dealerValue < playerValue && dealerValue < 18){
-        		String card = Deck.deck[nextCard];
-        		dealerHand2[dealerCards] = card;
+            System.out.println("you selected to stand");
+            //Coping and increasing one space in dealer's hand   
+            String[] dealerHand2 = Arrays.copyOf(dealerHand, dealerHand.length + 1);
+            while(dealerValue < playerValue && dealerValue < 18){
+                String card = Deck.deck[nextCard];
+                dealerHand2[dealerCards] = card;
         		
-       			System.out.println("Dealer Draws: " + card);
+                System.out.println("Dealer Draws: " + card);
         			
-       			dealerHand = Arrays.copyOf(dealerHand2, dealerHand2.length);
-   	        	dealerHand2 = Arrays.copyOf(dealerHand, dealerHand.length+1);
+                dealerHand = Arrays.copyOf(dealerHand2, dealerHand2.length);
+                dealerHand2 = Arrays.copyOf(dealerHand, dealerHand.length+1);
             	
-   	        	dealerValue += Values.value(card);
-   	        	dealerCards++;
+   	        dealerValue += Values.value(card);
+   	        dealerCards++;
     	        nextCard++;
     	        
-   	        	System.out.println("Dealer's Points: " + dealerValue);
-	        	System.out.println("Your hand: " + Arrays.toString(playerHand));
-	        	System.out.println("Dealer's hand: " + Arrays.toString(dealerHand));
-        	} 
-        	if(dealerValue > 21) {
+                System.out.println("Dealer's Points: " + dealerValue);
+                System.out.println("Player's Points: " + playerValue);
+                System.out.println("\nYour hand: " + Arrays.toString(playerHand));
+                System.out.println("Dealer's hand: " + Arrays.toString(dealerHand));
+            } 
+            //Checking if the game is won or lost from the player's and dealer's values
+            if(dealerValue > 21) {//If dealer has more than 21 the player wins
         		System.out.println("You Win");
         		gameWon="true";
         		
-        	}else if(dealerValue > playerValue){
+            }else if(dealerValue > playerValue){
         		System.out.println("Dealer Wins");
-        		gameWon="false";
-        		
-        	}else {
-        		System.out.println("Draw");
-        		setGameWon("draw");
-        		
-        	}
+        		gameWon="false";	
+            }
+            
         } else if(playerValue == 21) {
         	System.out.println("You Won");
         	gameWon= "true";
@@ -134,13 +134,18 @@ public class Game {
         	System.out.println("You are busted");
         	gameWon= "false";
         }
-
-        //Players player = new Players();
     } 
+    
+    /**
+    * This method sets the GameWon and prints it out
+    */
     public static void setGameWon(String gW) {
 		gameWon = gW;
 		System.out.println(gameWon);
 	}
+    /**
+    * This method gets GameWon by returning the String that gameWon is equal to.
+    */
     public static String getGameWon() {return gameWon;}
 }
 
