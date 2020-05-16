@@ -11,7 +11,11 @@ public class Game {
     public static String[] dealerHand = new String[2];
     public static String[] playerHand = new String[2];
 	public static String gameWon = "";
-	
+	/**
+	 * This method draws the first 4 initial cards from the deck and
+	 * up to 5 cards for the players if they type hit. If not 
+	 * according to the conditions it takes the appropriate action
+	 */
     public static void cards(){
         
         //Initializing the deck class.
