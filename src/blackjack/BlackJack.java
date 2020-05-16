@@ -27,6 +27,7 @@ public class BlackJack {
     	System.out.println(test);
                 
         Game.cards();
+        //System.out.println(name);
     }
        
 } //end class
