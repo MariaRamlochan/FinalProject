@@ -64,8 +64,8 @@ public class Game {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nDo you want to Hit or Stand?\nType 'hit' to Hit and 'stand' to Stand");
         String nextMove = sc.nextLine();
-        //the location of the next card in the deck
         
+        //the location of the next card in the deck
         int nextCard = 4;
         //Making a copy of the current player's hand and adding one space for more cards
         String[] playerHand2 = Arrays.copyOf(playerHand, playerHand.length + 1);
