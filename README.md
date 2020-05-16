@@ -7,6 +7,7 @@ This program alows the player to play a simplified version of the game BlackJack
 DATE: 15/05/2020
 
 AUTHORS: Maria Ramlochan, Nirdesh shrestha
+
 JavaDoc: C:\Users\maria\OneDrive\Documents\NetBeansProjects\BlackJack\dist\javadoc\blackjack\package-summary.html
 
 USER INSTRUCTIONS: How to play:
