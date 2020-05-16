@@ -126,9 +126,9 @@ public class Game {
         	System.out.println(gameWon);
         } else {
         	System.out.println("You are busted");
-        	System.out.println(Players.getName());;
+        	//System.out.println(Players.getName());;
         	setGameWon("false");
-        	System.out.println(gameWon);
+        	//System.out.println(gameWon);
         }
 
         //Players player = new Players();

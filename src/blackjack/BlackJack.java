@@ -24,7 +24,7 @@ public class BlackJack {
     	System.out.println("\nEnter the amount you wish bet: ");
     	int bet = sc.nextInt(); 
     	String gameWon = Game.gameWon;
-    	System.out.println("herlf:"+gameWon);
+    	System.out.println(gameWon);
     	Bet betObject1 = new Bet(bet, gameWon);
     	
     	System.out.println(test);
