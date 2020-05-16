@@ -1,4 +1,10 @@
 package blackjack;
+/**
+ * This class increase or decrease the amount the player bets and removes it 
+ * from the initial total.
+ * 
+ * @author Nirdesh Shrestha
+ */
 
 public class Bet {
 	public static int chips = 2000; //Player's initial amount.

@@ -1,13 +1,14 @@
 package blackjack;
+
+import java.util.Arrays;
+import java.util.Scanner;
 /**
  * This class executes the win or loses from the values taken from the values class
  * and initialize the shuffling and dealing hands of the player and the dealer.
  * 
- * @author Maria Ramlochan & Nirdesh Shrestha
+ * @author Maria Ramlochan
+ * @author Nirdesh Shrestha
  */
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Game {
 	
     public static String[] dealerHand = new String[2];

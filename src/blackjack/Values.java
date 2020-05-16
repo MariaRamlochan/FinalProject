@@ -6,8 +6,8 @@
 package blackjack;
 
 /**
- *
- * @author maria
+ * This class contains the values for each cards drawn.
+ * @author Maria Ramlochan
  */
 public class Values {
 		/**

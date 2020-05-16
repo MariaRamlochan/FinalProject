@@ -6,12 +6,16 @@
 package blackjack;
 import java.util.*;
 /**
- *
- * @author Maria Ramlochan & Nirdesh Shrestha
+ * This program let's the user play a simplified version of a BlackJack game
+ * against the computer(dealer).
+ * 
+ * @author Maria Ramlochan
+ * @author Nirdesh Shrestha
  */
 public class BlackJack {
 	
     /**
+     * This is the main method.
      * @param args the command line arguments
      */
     public static void main(String[] args) {
